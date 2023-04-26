@@ -59,17 +59,18 @@ onMounted(() => {
         <p>
           如果你觉得此项目对你有帮助，请在 GitHub 帮我点个 Star 或者给予一点赞助，谢谢！
         </p>
+				<p>
+					友情链接：
+					<a
+						class="text-blue-600 dark:text-blue-500"
+						href="https://chat.vihacker.top"
+						target="_blank"
+					>
+						灵思AI
+					</a>
+				</p>
       </div>
-      <p>{{ $t("setting.api") }}：{{ config?.apiModel ?? '-' }}</p>
-      <p v-if="isChatGPTAPI">
-        {{ $t("setting.monthlyUsage") }}：{{ config?.usage ?? '-' }}
-      </p>
-      <p v-if="!isChatGPTAPI">
-        {{ $t("setting.reverseProxy") }}：{{ config?.reverseProxy ?? '-' }}
-      </p>
       <p>{{ $t("setting.timeout") }}：{{ config?.timeoutMs ?? '-' }}</p>
-      <p>{{ $t("setting.socks") }}：{{ config?.socksProxy ?? '-' }}</p>
-      <p>{{ $t("setting.httpsProxy") }}：{{ config?.httpsProxy ?? '-' }}</p>
     </div>
   </NSpin>
 </template>
