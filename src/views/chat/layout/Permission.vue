@@ -62,7 +62,10 @@ function handlePress(event: KeyboardEvent) {
           <p class="text-base text-center text-slate-500 dark:text-slate-500">
             {{ $t('common.unauthorizedTips') }}
           </p>
-          <Icon403 class="w-[200px] m-auto" />
+					<div class="w-[300px] m-auto w-[200px] m-auto" style="text-align: center;">
+						<p style="margin-top:10px;line-height:1.8;font-size:13px;"> 扫码或搜索：<span style="color:#E9405A;font-weight:bold;">边城手记</span> 回复：<span style="color:#e9415a;font-weight:bold;font-size:17px;margin-bottom:45px;">403</span><br>即可获得<span style="color:#e9415a;font-weight:bold;"> 验证码 </span>解锁 🔓 </p>
+						<img src="https://qnoss.vihacker.top/qrcode.png" style="text-align:display: block;margin:0 auto;width:180px;margin-top:10px;margin-bottom:10px;border:8px solid rgb(230, 230, 230);">
+					</div>
         </header>
         <NInput v-model:value="token" type="password" placeholder="" @keypress="handlePress" />
         <NButton
